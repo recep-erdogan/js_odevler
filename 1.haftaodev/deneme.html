@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <title>
+          spaciel Google
+        </title>
+
+        <style>
+            .container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding:  24px;
+            }
+
+            .logo {
+                margin-bottom: 20px;
+            }
+            .arama{
+                flex-direction: row;
+                padding: 10px;
+                margin-block-end: 10px;
+                width: 375px;
+            }
+
+            .arama-butonu {
+                padding: 10px;
+                margin-right: 4px;
+                flex-grow: 0;
+            }
+
+            .inner {
+                align-items: baseline;
+            }
+
+            .fluid {
+                flex: 1;
+            }
+
+            .button-container {
+                display: flex;
+                flex-direction: row;
+                width: 100%;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="container inner">
+                <img class="logo" src="google.png" alt="Google Logo" width="400px">
+                <form>
+                    <input class="arama" type="text" name="arama yap" id="search-input">
+                </form>
+                <div class="button-container">
+                    <input class="arama-butonu" type="button" value="Google'da Ara" onclick="search()">
+                    <input class="arama-butonu fluid" type="button" value="Kendimi şansli Hissediyorum">
+                </div>
+        </div>
+        </div>
+
+    </body>
+    <script>
+        function search() {
+            let searchInput = document.getElementById("search-input");
+            let searchTerm = searchInput.value;
+            let searchUrl = "https://www.google.com/search?q=" + searchTerm;
+            window.location.href = searchUrl;
+        }
+    </script>
+</html>
